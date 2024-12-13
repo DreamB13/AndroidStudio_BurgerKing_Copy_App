@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="홈"
+        android:icon="@drawable/home"
+        android:iconTint="#512314"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/cupon"
+        android:title="쿠폰"
+        android:icon="@drawable/coupon"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/order"
+        android:title="주문"
+        android:icon="@drawable/order"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/myking"
+        android:title="MY킹"
+        android:icon="@drawable/myking"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/more"
+        android:title="더보기"
+        android:icon="@drawable/more"
+        android:enabled="true"/>
+</menu>
