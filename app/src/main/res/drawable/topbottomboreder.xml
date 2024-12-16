@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape
+            android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#FF512314" /><!--경계선 색-->
+            <solid android:color="#FFf4ebdc" /> <!--배경색-->
+
+        </shape>
+    </item>
+
+    <item android:top="1dp" android:bottom="1dp">
+        <shape
+            android:shape="rectangle">
+            <stroke android:width="10dp" android:color="#FFf4ebdc" />
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+
+</layer-list>
+<!--선 두께 조절하려면 1dp들의 값을 바꿔줘야한다-->

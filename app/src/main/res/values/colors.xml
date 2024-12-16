@@ -4,4 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#F5EBDC</color>
     <color name="textcolor">#512314</color>
+    <color name="burgerkingred">#FFD62400</color>
+    <color name="burgerkingyellow">#FFFFAA01</color>
+    <color name="burgerkingorange">#FFF58539</color>
+    <color name="burgerkingtext">#FF512314</color>
+
 </resources>

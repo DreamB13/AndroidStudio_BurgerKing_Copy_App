@@ -5,10 +5,230 @@
     android:layout_height="match_parent"
     tools:context=".CuponActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="쿠폰 페이지" />
+        android:background="#F5EBDC">
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="쿠폰"
+            android:textColor="#512314"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- 뒤로가기 버튼 -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="35dp"
+            android:contentDescription="메인화면으로 돌아감"
+            android:padding="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back"
+            android:textColor="#ff0000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+        <!-- 매장용 쿠폰 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Shop"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/background"
+            android:text="매장용"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/textcolor"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btn_KingOder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+        <!-- 킹오더용 쿠폰 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_KingOder"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#F5EBDC"
+            android:text="킹오더용"
+            android:textColor="#512314"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/btn_Shop"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        <!-- 타임딜 쿠폰 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_TimeDeal"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:background="#F5EBDC"
+            android:text="타임딜"
+            android:textColor="#512314"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_KingOder"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="138dp"
+            android:contentDescription="쿠폰 스크롤"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- 쿠폰리스트 -->
+                <ImageButton
+                    android:id="@+id/btn_cupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="쿠폰"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cupon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_KingOder" />
+
+                <ImageButton
+                    android:id="@+id/btn_cupon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="쿠폰"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cupon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_cupon" />
+
+                <ImageButton
+                    android:id="@+id/btn_cupon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="쿠폰"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cupon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_cupon2" />
+
+                <ImageButton
+                    android:id="@+id/btn_cupon4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="cupon"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cupon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_cupon3" />
+
+                <ImageButton
+                    android:id="@+id/btn_cupon5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="쿠폰"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cupon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_cupon4" />
+
+                <ImageButton
+                    android:id="@+id/btn_cupon6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="cupon"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cupon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_cupon5" />
+
+                <ImageButton
+                    android:id="@+id/btn_cupon7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cupon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_cupon6" />
+
+                <ImageButton
+                    android:id="@+id/btn_cupon8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cupon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_cupon7" />
+
+                <ImageButton
+                    android:id="@+id/btn_cupon9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cupon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_cupon8" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
